@@ -1,0 +1,9 @@
+name: Slash Command Approver
+on: issue_comment
+jobs:
+  ok-to-test:
+    runs-on: ubuntu-latest
+    if: github.event.issue_comment.pull_request
+    steps:
+    - name: Test output
+      run: echo ${{ github.event }}
