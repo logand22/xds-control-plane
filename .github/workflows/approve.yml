@@ -8,4 +8,5 @@ jobs:
   approval:
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, 'safe to test')
-    run: echo "test"
+    steps:
+      - run: echo test
