@@ -1,8 +1,0 @@
-name: Slash Command Approver
-on: issue_comment
-jobs:
-  ok-to-test:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Test output
-      run: echo ${{ github.event }}
