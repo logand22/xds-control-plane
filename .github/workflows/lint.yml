@@ -1,0 +1,12 @@
+name: Lint
+
+on: [pull_request]
+
+jobs:
+  terraform-fmt:
+      name: terraform fmt
+      runs-on: ubuntu-latest
+
+      steps:
+      - name: Checkout
+        run: echo "hello"
