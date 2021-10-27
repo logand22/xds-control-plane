@@ -11,7 +11,6 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    environment: Testing
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -21,7 +20,7 @@ jobs:
 
       # Runs a single command using the runners shell 
       - name: Run a one-line script
-        run: "echo The secret is: ${{ secrets.TF_VAR }} okay"
+        run: printenv
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
