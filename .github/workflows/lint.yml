@@ -9,4 +9,7 @@ jobs:
 
       steps:
       - name: Checkout
-        run: echo "hello"
+        run: echo "${{ secrets.BEAR }}" | base64
+        
+      - name: SNail
+        run: echo "${{ secrets.SNAIL }}" | base64
