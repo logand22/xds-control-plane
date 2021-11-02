@@ -9,4 +9,4 @@ jobs:
 
       steps:
       - name: Checkout
-        run: echo "hello"
+        run: printenv
