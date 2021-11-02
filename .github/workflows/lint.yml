@@ -2,10 +2,7 @@ name: Lint
 
 on: [pull_request, workflow_dispatch]
 
-permissions:
-  contents: write
-  id_token: write
-
+permissions: write-all
 jobs:
   terraform-fmt:
       name: terraform fmt
