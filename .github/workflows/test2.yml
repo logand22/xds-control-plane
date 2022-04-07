@@ -1,11 +1,9 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI2
 
 # Controls when the workflow will run
-on: 
-  pull_request_target:
-    types: [opened, ready_for_review, synchronize]
+on: pull_request
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
