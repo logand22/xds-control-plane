@@ -4,14 +4,10 @@ on: [pull_request, workflow_dispatch]
 
 permissions: write-all
 jobs:
-  terraform-fmt:
-      name: terraform fmt
-      runs-on: ubuntu-latest
-
-      steps:
-      - name: Checkout
-        run: |
-          curl \
-          -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
-          "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=api://AzureADTokenExchange"
-        
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
